@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rock_paper_scissor/screens/gameplay_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -18,7 +19,12 @@ class WelcomeScreen extends StatelessWidget {
                 height: 200,
               ),
               ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const GameplayScreen()));
+                  },
                   icon: const Icon(Icons.computer),
                   label: const Text('Play With Computer')),
               TextButton(
